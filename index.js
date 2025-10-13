@@ -16,12 +16,15 @@ let books=[{
     pages:80
 }]
 app.get('/',(req,res)=>{
+    res.send("working")
+})
+app.get('/books',(req,res)=>{
     res.render("books.ejs",{books});
 })
-app.get('/new',(req,res)=>{
+app.get('/books/new',(req,res)=>{
     res.render('new.ejs');
 })
-app.post('/',(req,res)=>{
+app.post('/books',(req,res)=>{
 let{title,author,price,pages}=req.body;
 books.push({
     title,author,price,pages
