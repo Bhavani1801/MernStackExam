@@ -29,5 +29,5 @@ let{title,author,price,pages}=req.body;
 books.push({
     title,author,price,pages
 })
-    res.redirect('/');
+    res.redirect('/books');
 })
