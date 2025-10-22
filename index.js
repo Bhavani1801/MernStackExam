@@ -19,10 +19,10 @@ app.get('/',(req,res)=>{
     res.send("working")
 })
 app.get('/books',(req,res)=>{
-    res.render("books.ejs",{books});
+    res.json("books.ejs",{books});
 })
 app.get('/books/new',(req,res)=>{
-    res.render('new.ejs');
+    res.json('new.ejs');
 })
 app.post('/books',(req,res)=>{
 let{title,author,price,pages}=req.body;
